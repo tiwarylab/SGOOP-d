@@ -7,4 +7,4 @@ Before explaining how to do SGOOP-d with iterative probability factorization/mul
 
 With the above flowchart in mind, SGOOP-d further utilizes the eigenvalues (rate) and eigenvectors (RC) from the MaxCal-derived rate matrix
 
-![image](https://user-images.githubusercontent.com/22850008/115948744-ff00df00-a49d-11eb-8953-3141ae008dcc.png)
+<img src="https://user-images.githubusercontent.com/22850008/115948744-ff00df00-a49d-11eb-8953-3141ae008dcc.png" width="600">
