@@ -1,7 +1,7 @@
 # SGOOP-d: Estimating reaction coordinate dimensionality and kinetic distances for rare event systems
 
 ```math
-D^2_{\tau}(\mathbf{x}_1,\mathbf{x}_2)=\int_{\mathbf{y}\in\Omega}\frac{|p_{\tau}(\mathbf{y}|\mathbf{x}_1)-p_{\tau}(\mathbf{y}|\mathbf{x}_2)|^2}{\pi(\mathbf{y})}d\mathbf{y}
+\frac{\sigma}{\sqrt{n}}
 ```
 
 Before explaining how to do SGOOP-d with iterative probability factorization/multi-SGOOP, we shall first show how we perform each step of SGOOP with the following flowchart.
