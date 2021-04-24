@@ -1,8 +1,8 @@
 # SGOOP-d: Estimating reaction coordinate dimensionality and kinetic distances for rare event systems
 
-```math
-\frac{\sigma}{\sqrt{n}}
-```
+
+$$\frac{\sigma}{\sqrt{n}}$$
+
 
 Before explaining how to do SGOOP-d with iterative probability factorization/multi-SGOOP, we shall first show how we perform each step of SGOOP with the following flowchart.
 
