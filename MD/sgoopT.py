@@ -24,20 +24,19 @@ def stationary(rc, rc_bin, weights=None):
     
     return prob, binedges
     
-def mu_factor(unbiased_rc, pi, rc_bin, max_d=1):
+def mu_factor(unbiased_rc, pi, binedges, max_d=1):
     """
     The dynamical prefactor in maxcal estimated transition rate matrix. 
     This was related to the constraints of the number of first nearest neighbor transitions.
     """
-    rc_min, rc_max=np.min(unbiased_rc), np.max(unbiased_rc)
-    bins=np.linspace(rc_min, rc_max, rc_bin+1)
-    unbiased_rc_idx=np.digitize(unbiased_rc, bins)
+    unbiased_rc_idx=np.digitize(unbiased_rc, binedges)-1
     
     d=np.arange(max_d)+1
     MU=np.zeros(max_d)
+    D=0
     for i, di in enumerate(d):
-        D=np.sum(np.sqrt(pi[:-di]*pi[di:]))
-        N_mean=np.sum(np.abs(unbiased_rc_idx[:-di]-unbiased_rc_idx[di:])==1)
+        D+=np.sum(np.sqrt(pi[:-di]*pi[di:]))
+        N_mean=np.sum(np.abs(unbiased_rc_idx[:-di]-unbiased_rc_idx[di:])==di)
         N_mean/=len(unbiased_rc_idx)
         MU[i]=N_mean/D
         
